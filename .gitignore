@@ -1,0 +1,36 @@
+ Institution to Create or Give token 
+ 1. Createsuperuser in project directory 
+ 2. login with superuser in Django admin pannel
+ 3. create user using django admin pannel or sqllite3
+ 4. write basic information and give token which is automatic generate
+ 5. Three way to Create Token JWT,signals and admin create Token
+ 6. Here only admin create Token
+
+ Institution to GET token
+ 1. Open Terminal 
+ 2. Got to project directory
+ 3. run python manage.py  runserver command 
+ 4. open another Terminal run below command with authenticat username and password
+
+ http POST http://127.0.0.1:8000/gettoken/ username="Authenticat_user" password="Authenticat_user_password"
+ 
+ Example:
+ http POST http://127.0.0.1:8000/gettoken/ username="raeesh" password="raeesh123"
+
+ Note:
+    Authenticat_user and Authenticat_user_password only Create by superuser or admin
+
+
+ Institution to GET Data usign Token 
+ 1. Open Terminal 
+ 2. Got to project directory
+ 3. run python manage.py  runserver command 
+ 4. open another Terminal run below command and GET data usign Token
+
+ http GET http://127.0.0.1:8000/api/messages/ "Authorization:Token write_token"
+ 
+ Example:
+ http GET http://127.0.0.1:8000/api/messages/ "Authorization:Token d8b68b897785be16883cb1281f6d5094310a01da"
+
+ Note:
+ I am not disable browser base api only Authenticate_user see the output
